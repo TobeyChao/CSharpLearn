@@ -8,7 +8,13 @@ namespace C_Learn
         {
             TestA testA = new TestA();
             Console.WriteLine(testA.GetDes());
-            AppDomain app = new AppDomain();
+            Console.WriteLine("Demo for put characters and words in floating point number");
+            Console.WriteLine(String.Format("{0:0.00}", 256.3654));   
+            Console.WriteLine(String.Format("{0:0},{2}", 256.3654, 256, 259.0));   
+            Console.WriteLine(String.Format("{0:Number is 0.00}", 256.3));   
+            Console.WriteLine(String.Format("{0:0xxx.yyy0}", 256.3));          
+ 
+            Console.WriteLine(); 
         }
     }
 }
