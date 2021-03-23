@@ -60,6 +60,13 @@ namespace C_Learn
             var dayInt1 = date1.Date.Second;
             var dayInt2 = date2.Date.Second;
             Console.WriteLine("Hello");
+
+            //https://docs.microsoft.com/en-us/dotnet/api/system.timespan?view=net-5.0
+            DateTime departure = new DateTime(2010, 6, 12, 18, 32, 0);
+            DateTime arrival = new DateTime(2010, 6, 12, 22, 47, 0);
+            TimeSpan travelTime = arrival - departure;
+            //https://docs.microsoft.com/zh-cn/dotnet/api/system.timespan.tostring?view=net-5.0
+            Console.WriteLine(travelTime.ToString("hh\\:mm\\:ss"));
         }
     }
 }
