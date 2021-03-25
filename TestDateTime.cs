@@ -67,6 +67,20 @@ namespace C_Learn
             TimeSpan travelTime = arrival - departure;
             //https://docs.microsoft.com/zh-cn/dotnet/api/system.timespan.tostring?view=net-5.0
             Console.WriteLine(travelTime.ToString("hh\\:mm\\:ss"));
+
+            while (true)
+            {
+                var dateNow = DateTime.Now;
+                var tmp = dateNow.Date.AddSeconds(18000);
+                if (tmp < dateNow)
+                {
+                    tmp = tmp.AddDays(1);
+                }
+                var dateFresh = tmp;
+                var dateSpan = dateFresh - dateNow;
+                Console.WriteLine(dateSpan.ToString("hh\\:mm\\:ss"));
+                Thread.Sleep(1000);
+            }
         }
     }
 }
